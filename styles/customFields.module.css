@@ -1,0 +1,33 @@
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerWrapper {
+    border: 1px solid #4473db;
+    padding: 40px;
+}
+
+.inputAlignment {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.inputCustom {
+    width: 100%;
+}
+
+.selectPlaceholderText {
+    color: black;
+}
+
+.button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

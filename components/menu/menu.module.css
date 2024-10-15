@@ -1,0 +1,48 @@
+.menuButton {
+	display: none;
+}
+
+.navWrapper {
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+	overflow: hidden;
+	position: relative;
+}
+
+.displayNavWrapper {
+	max-height: 1000px;
+	transition: max-height 0.5s ease-in;
+}
+
+.menuItemWrapper {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.menuItem {
+	/* color: var(--primaryColor); */
+	font-weight: 500;
+}
+
+.openArrow {
+	transition: all 0.8s;
+	position: absolute;
+	width: 90%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	height: 20px;
+	align-self: center;
+}
+
+.closeArrow {
+	transform: rotateX(180deg);
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}

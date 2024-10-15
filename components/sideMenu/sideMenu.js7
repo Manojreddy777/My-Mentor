@@ -1,0 +1,216 @@
+import React from "react";
+
+import styles from "./sideMenu.module.css";
+import Header from "../header/header";
+
+const OPS = {
+    AssetMgmt: {
+        id: 1,
+        title: "Asset Management",
+        selected: false,
+    },
+    AssetType: {
+        id: 2,
+        title: "Asset Type",
+        selected: false,
+    },
+    AssetDetails: {
+        id: 3,
+        title: "Asset Details",
+        selected: false,
+    },
+    AssetAllocation: {
+        id: 4,
+        title: "Asset Allocation",
+        selected: false,
+    },
+    AssetHealth: {
+        id: 5,
+        title: "Asset Health Check",
+        selected: false,
+    },
+    ProjectMgmt: {
+        id: 6,
+        title: "Project Management",
+        selected: false,
+    },
+    Wbs: {
+        id: 7,
+        title: "WBS Details",
+        selected: false,
+    },
+    Project: {
+        id: 8,
+        title: "Project Details",
+        selected: false,
+    },
+    Epic: {
+        id: 9,
+        title: "Epic Details",
+        selected: false,
+    },
+    UserStory: {
+        id: 10,
+        title: "User Story Details",
+        selected: false,
+    },
+    TaskDetails: {
+        id: 11,
+        title: "Task Details",
+        selected: false,
+    },
+    TimeSheetDetails: {
+        id: 12,
+        title: "TimeSheet Details",
+        selected: false,
+    },
+}
+
+const USER = {
+    HrMgmt: {
+        id: 1,
+        title: "HR Details",
+        selected: false,
+    },
+    MyProfile: {
+        id: 2,
+        title: "My Profile",
+        selected: false,
+    },
+    MyLeave: {
+        id: 3,
+        title: "My Leave Details",
+        selected: false,
+        link: "/employee/MyLeaves",
+    },
+    tasklist: {
+        id: 4,
+        title: "My Task List",
+        selected: false,
+        link: "/employee/task-list",
+    },
+    timesheet: {
+        id: 5,
+        title: "Timesheet",
+        selected: false,
+        link: "/employee/timesheet",
+    },
+    academy: {
+        id: 6,
+        title: "Academy Details",
+        selected: false,
+    },
+    AcCategory: {
+        id: 7,
+        title: "Course Categories",
+        selected: false,
+        link: "/employee/AcCategory",
+    },
+    AcSubCategory: {
+       id: 8,
+       title: "Course Sub-Categories",
+       selected: false,
+       link: "/employee/AcSubCategory",
+    },
+    AcCourse: {
+       id: 9,
+       title: "Course List",
+       selected: false,
+       link: "/employee/AcCourse",
+    },
+    MyCourse: {
+       id: 10,
+       title: "My Course List",
+       selected: false,
+    },
+    examPaper: {
+        id: 11,
+        title: "Take Exam",
+        selected: false,
+        link: "/employee/examPaper",
+    },
+    scoreCard: {
+        id: 12,
+        title: "ScoreCard History",
+        selected: false,
+        link: "/employee/ScoreCard",
+    },
+
+}
+
+export default class SideMenu extends React.Component {
+    constructor(props) {
+        super(props);
+        let menu = [];
+		if (global.config.user_role == "6") {
+			menu = OPS;
+		} else if (global.config.user_role == "1"){
+			menu = USER;
+		} 
+        this.state = {
+            menu: menu,
+            username: undefined,
+            loading: false,
+            closed: true,
+        };
+    }
+
+    componentDidMount() {
+        const { tag } = this.props;
+        const { menu } = this.state;
+
+        if (menu[tag] !== undefined) {
+            menu[tag].selected = true;
+            this.setState({ menu: menu });
+        }
+    }
+
+    render() {
+        const { tag, title, loading } = this.props;
+        const { menu, closed } = this.state;
+
+        return (
+            <div>
+                <Header />
+                <div className={styles.wrapper}>
+                    {loading && (
+                        <div className={styles.loadingMainDiv}>
+                            <div className={styles.loadingDiv}>
+                                <div className="bouncing-loader">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    <div
+                        className={`${styles.navWrapper} ${
+                            closed && styles.closedNavWrapper
+                        }`}
+                    >
+                        {Object.keys(menu).map((key) => (
+                            <a
+                                href={menu[key].link}
+                                className={
+                                    menu[key].selected ? styles.selected : ""
+                                }
+                            >
+                                {menu[key].title}
+                            </a>
+                        ))}
+                    </div>
+
+                    <div className={styles.contentWrapper}>
+                        <h2 className={styles.title}>
+                            {menu[tag] !== undefined ? menu[tag].title : title}
+                        </h2>
+                        <div className={styles.line} />
+                        {this.props.children}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}

@@ -1,0 +1,216 @@
+.wrapper {
+    margin-bottom: 40px;
+}
+
+.viewWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.selectCareer {
+    width: 110px;
+    padding: 7px;
+    display: inline-block;
+    border: 1px solid var(--primaryColor);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+    outline: none;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+)
+        no-repeat 95% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.filterbutton {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 40px 40px 0px;
+}
+
+.filterbutton button:last-child {
+    margin-left: 70px;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px 40px 0px;
+}
+
+.userAlignment {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 60px;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	color: var(--primaryColor);
+}
+
+.iconComment {
+    width: 30px;
+	height: 30px;
+	color: var(--primaryColor);
+}
+
+.table > tbody tr:hover {
+    background-color: #a3b9e7;
+}
+
+.dropdown {
+	position: relative;
+	height: 100%;
+	align-items: center;
+}
+
+.dropdown:hover {
+    background-color: rgb(181, 176, 176);
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 135px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 59px;
+    left: 0px;
+}
+
+.dropdown_content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+	padding: 12px;
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.dropdown a:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.dropdown i {
+    margin-left: 5px;
+}
+.show {
+    display: block;
+}
+
+.inputAlignment {
+    display: flex;
+    padding-top: 20px;
+}
+
+.inputAlignment p {
+    align-self: center;
+    padding-right: 5px;
+}
+
+.inputAlignment select {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+}
+
+.filterAlignment {
+    padding-top: 20px;
+    padding-right: 50px;
+}
+
+.filterAlignment p {
+    align-self: center;
+    padding-bottom: 3px;
+}
+
+
+.filterAlignment select {
+    min-width: 300px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+}
+
+.rowAlignment {
+    display: flex;
+}
+
+.title {
+    font-size: 20px;
+    color: var(--primaryColor);
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0.5px solid black;
+    margin: 10px 0px 20px 0px;
+}
+
+.table thead {
+	background-color: #efefef;
+	border-radius: 10px;
+}
+
+.table > thead tr {
+	text-align: center;
+	padding: 10px;
+}
+
+.table > thead th {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.table > tbody td {
+	text-align: center;
+	border: 0.5px solid black;
+	padding: 8px;
+	margin-bottom: 10px;
+} 
+
+.table tfoot {
+	background-color: #efefef;
+	border-radius: 10px;
+}
+
+.table > tfoot tr {
+	text-align: center;
+	padding: 10px;
+}
+
+.table > tfoot th {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .button {
+        justify-content: center;
+    }
+}
+.chartContainer {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 5%;
+    overflow: hidden;
+    width: 100%;
+}
+  .chart {
+    flex: 1;
+    padding: 2%; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+    margin-right: 10px;
+  }

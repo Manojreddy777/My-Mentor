@@ -1,0 +1,139 @@
+.mainWrapper {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+.wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 800px;
+    overflow: hidden;
+    background: white;
+    overflow: scroll;
+}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.closeButton {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.middleWrapper {
+    padding: 10px;
+    background-color: rgba(230, 230, 230, 0.815);
+    height: auto;
+	min-height: 100%;
+    font-size: 13px;
+}
+
+.buttonAlignment {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.button {
+    color: white;
+    background-color: var(--primaryColor);
+    padding: 6px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: all 0.3s;
+    font-size: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: var(--primaryDarkColor);
+}
+
+.contentAlignment {
+    background-color: white;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 5px;
+	padding: 15px;
+}
+
+.imageAlignment {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.userImage {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.singleLine p {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.fromUser {
+    font-weight: bold;
+}
+
+.timeFont {
+    margin-top: 3px;
+    color: rgb(107, 107, 107);
+}
+
+.contentAlignment .deleteAlignment {
+    margin-left: auto;
+}
+
+.contentAlignment:hover .deleteAlignment {
+    visibility: visible;
+}
+
+.deleteAlignment {
+    visibility: hidden;
+}
+
+.attachmentDiv {
+	display: flex;
+	margin-bottom: 5px;
+}
+.attachmentDiv p {
+	flex: 1;
+	font-size: 12px;
+}
+.attachmentDiv img {
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
+

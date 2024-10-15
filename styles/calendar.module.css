@@ -1,0 +1,42 @@
+/* calendar.module.css */
+.calendarPage {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+.leftPanel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.leftBox {
+    flex: 1;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.rightPanel {
+    width: 50%;
+    padding: 20px;
+}
+
+.rightBox {
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 200px;
+    padding-left: 200px;
+    display: flex;
+    flex-direction: column;
+}

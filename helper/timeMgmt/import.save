@@ -1,0 +1,38 @@
+
+const TsWbs = {
+
+    get: (filter) =>
+        new Promise(function (resolve, reject) {
+            const baseUrl = "/tsWbs/getAll";
+            const filterUrl = TsWbs.getFilterUrl(filter);
+            API.get(`${baseUrl}?${filterUrl}`)
+                .then(async (res) => {
+                    resolve(TsWbs.format(res.data));
+                })
+                .catch((err) => {
+                    reject(err);
+                });
+        }),
+    
+	format: (data) => {
+        const formatted = [];
+        for (let d of data) {
+            formatted.push({
+                id: d.id,
+                name: d.name,
+            });
+        }
+        return formatted;
+    },
+    getFilterUrl: (filter) => {
+        let url = "";
+		if (filter !== undefined) {
+			if (filter.tnnt_id !== undefined) {
+				url += "tnnt_id=" + filter.tnnt_id + "&";
+			}
+                  
+		}
+		return url;
+	},
+};
+export default TsWbs;

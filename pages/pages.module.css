@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.wrapper {
+    margin-bottom: 40px;
+}
+
+.viewWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.selectCareer {
+    width: 110px;
+    padding: 7px;
+    display: inline-block;
+    border: 1px solid var(--primaryColor);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+    outline: none;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+.my-registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+  }
+  .my-registration-form .formhead {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+  .formhead{
+    font-size: 20px;
+  }
+  .formlabel {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .forminput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+}
+  
+.formselect {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+}
+  
+.formbutton {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+}
+  
+  .formbutton:hover {
+    background-color: #45a049;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .my-registration-form {
+      width: 100%;
+    }
+  }
+  @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  
+.holidayTable {
+    width: 70%; /* Adjust the width as needed */
+    margin: auto; /* Center the table horizontally */
+    border-collapse: collapse;
+}
+
+.holidayTable th,
+.holidayTable td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left; /* Center the text within cells */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowAlignment {
+    display: flex;
+}
+
+.title1{
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-align: center;
+}
+
+.filterbutton {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 40px 40px 0px;
+}
+
+.filterbutton1 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 40px 0px 0px;
+}
+
+
+.filterbutton button:last-child {
+    margin-left: 70px;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px 40px 0px;
+}
+
+.paratitle {
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  
+}
+.paramargin{
+    margin-left: 20px;
+}
+
+.smallTable {
+        width: 50%; 
+        margin-top: 10px;   
+        margin-left:20px;
+    }
+
+.smallTable th, .smallTable td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+.smallTable .procedureCell {
+        white-space: pre-line; 
+        
+}
+
+.userAlignment {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 60px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: var(--primaryColor);
+}
+
+.table>tbody tr:hover {
+    background-color: #a3b9e7;
+}
+
+.table1{
+    margin-left:20px;
+}
+
+.table1>tbody td {
+    text-align: left;
+}
+
+
+.iconComment {
+    width: 30px;
+    height: 30px;
+    color: var(--primaryColor);
+}
+
+.inputDiv {
+    display: flex;
+}
+
+.inputGroup {
+    padding-right: 20px;
+    width: 21.5%;
+}
+
+.inputAlignment {
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+.inputAlignment p {
+    align-self: center;
+    padding-bottom: 3px;
+}
+
+.inputAlignment select {
+    width: 300px;
+    /* min-width: 300px; */
+    /* font-size: 14px; */
+    padding: 10px;
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+}
+
+.inputCustom {
+    width: 300px;
+}
+
+.date {
+    width: 101%;
+    height: 38px;
+    padding-left: 10px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+}
+
+.rowAlignment {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.rowAlignment p {
+    margin-right: 10px; 
+}
+
+
+.test{
+    margin-left: 15px;  
+}
+
+.test1{
+    margin-top: 15px;  
+    margin-bottom: 15px;
+}
+
+.headername{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--primaryColor);
+}
+
+.pass {
+    cursor: pointer;
+    position: absolute;
+    color: #aaa;
+    margin-top: 8px;
+    left: 290px;
+}
+
+.passRequirement {
+    font-size: 10px;
+    color: red;
+}
+
+.active {
+    background-color: rgba(17, 189, 17, 0.336);
+    font-weight: 600;
+    color: green;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.inactive {
+    background-color: rgba(235, 70, 70, 0.459);
+    font-weight: 600;
+    color: red;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.title {
+    font-size: 20px;
+    color: var(--primaryColor);
+}
+
+.excelcontainer {
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .button {
+        justify-content: center;
+    }
+    .inputAlignment {
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+    
+    .inputAlignment p {
+        align-self: center;
+        padding-bottom: 2px;
+    }
+    
+    /* .inputAlignment select {
+        min-width: 200px;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+        border-color: var(--primaryColor);
+    } */
+    .inputCustom {
+        width: 140px;
+    }
+}

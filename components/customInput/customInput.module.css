@@ -1,0 +1,83 @@
+.inputText {
+	padding: 10px;
+	border: 1px solid rgb(201, 201, 201);
+	border-radius: 2px;
+	font-size: 14px;
+	outline: none;
+	border-color: var(--primaryColor);
+}
+
+.inputText:focus {
+	border-color: var(--primaryColor);
+}
+
+.inputText:disabled {
+	cursor: not-allowed;
+}
+
+.inputGroup {
+	/* position: relative; */
+	/* border: 1px solid var(--primaryColor); */
+	border-radius: 5px;
+	flex: 1;
+	/* margin-bottom: 15px; */
+}
+/* 
+.inputGroup:focus-within {
+	border-color: var(--primaryColor);
+} */
+
+.inputGroup input {
+	border: none;
+	background-color: transparent;
+	width: 100%;
+	color: #363636;
+	font-size: 14px;
+}
+
+.inputGroup label {
+	position: absolute;
+	background-color: transparent;
+	padding: 10px 10px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	color: #868686;
+	font-size: 14px;
+	cursor: text;
+	transition: all 0.3s;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.inputGroup:focus-within label,
+.inputGroup input:not(:placeholder-shown) ~ label,
+.inputGroup textarea:not(:placeholder-shown) ~ label {
+	padding: 1px;
+	background-color: #ffffff;
+	top: -12px;
+	left: 16px;
+	bottom: auto;
+	color: var(--primaryColor);
+	font-size: 12px;
+}
+
+.borderColorMan {
+	border: 1px solid var(--mandatoryColor);
+}
+
+.borderColorMan:focus-within {
+	border-color: var(--mandatoryDarkColor);
+}
+
+.borderColorOpt {
+	border: 1px solid var(--primaryColor);
+}
+
+.borderColorOpt:focus-within {
+	border-color: var(--primaryColor);
+}

@@ -1,0 +1,101 @@
+.wrapper {
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 200px;
+	width: 80vw;
+	/* font-size: 24px; */
+	line-height: 25px;
+}
+.content {
+	margin-bottom: 10px;
+	text-align: justify;
+}
+.heading {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.benifits {
+	margin-left: 40px;
+}
+.founderMessage {
+	font-size: 22px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: 600;
+	color: var(--primaryColor)
+}
+.innerWrapper {
+    display: flex;
+	margin-bottom: 30px;
+}
+.image {
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+	padding-left: 10px;
+}
+.image img {
+	border-radius: 50%;
+	box-shadow: -4px 0px 4px 2px gray;
+    height: 240px;
+}
+.name {
+    font-size: 20px;
+    font-weight: 600;
+}
+.founder {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.paragraph {
+    margin-bottom: 20px;
+	text-align: justify;
+}
+.ppt {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primaryColor);
+}
+.mobileVersion{
+    display: none;
+}
+
+.version {
+    position: absolute;
+    right: 20px; /* Adjust this value for desired horizontal position */
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+@media (max-width: 480px) {
+	.wrapper {
+		padding: 20px;
+		font-size: 14px;
+		/* margin-top: 50px; */
+		width: 100vw;
+		/* height: 120vw; */
+	}
+	.hide {
+        display: none;
+    }
+    .mobileVersion {
+        display: flex;
+        justify-content: center;
+		margin-bottom: 20px;
+    }
+    .mobileVersion img {
+		border-radius: 50%;
+		box-shadow: -4px 0px 4px 2px gray;
+        height: 150px;
+    }
+	.founderMessage {
+		margin-left: 0;
+	}
+	.innerWrapper {
+		margin-left: 0;
+	}
+}

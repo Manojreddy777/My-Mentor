@@ -1,0 +1,94 @@
+.wrapper {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.contentWrapper {
+    padding: 20px;
+    flex: 6;
+    overflow-y: auto;
+}
+
+.line {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 1px;
+    width: 100%;
+    background: rgb(226, 226, 226);
+}
+
+.navWrapper {
+    flex: 1;
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 40px;
+    transition: all 0.3s;
+    position: relative;
+    padding-right: 40px;
+}
+
+.navWrapper a {
+    color: #bce0ff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.navWrapper a:hover {
+    color: white;
+}
+
+.navWrapper .selected {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logoutText {
+    position: absolute;
+    color: var(--primaryColor);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.loadingMainDiv {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingDiv {
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+ .title {
+     color: var(--primaryColor);
+ }
+@media (max-width: 480px) {
+    .closedNavWrapper {
+        display: none;
+    }
+	.logoutText {
+		display: none;
+	}
+}

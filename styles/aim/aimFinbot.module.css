@@ -1,0 +1,243 @@
+/* .wrapper {
+  background-color: var(--primaryColor);
+}
+
+.heading {
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: var(--primaryColor);
+}
+
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.containerWrapper {
+  height: 28vw;
+  background-color: rgb(249, 249, 249);
+}
+
+.bottomWrapper {
+  display: flex;
+  flex: 1;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.inputCustom {
+  width: 100%;
+  border-radius: 0px 0px 0px 20px;
+  border: none;
+  outline: none;
+}
+
+.inputCustom input {
+  padding: 10px;
+  width: 100%;
+}
+
+.inputText {
+	padding: 10px;
+	border: 1px solid rgb(201, 201, 201);
+	border-radius: 2px;
+	font-size: 14px;
+	outline: none;
+	border-color: var(--primaryColor);
+}
+
+.inputText:focus {
+	border-color: var(--primaryColor);
+}
+
+.inputText:disabled {
+	cursor: not-allowed;
+} */
+
+.wrapper {
+  /* position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0 0 9px 4px rgba(192, 192, 192, 0.5);
+  border-radius: 20px;
+  transition: 0.5s;
+  width: 50vh;
+  height: 75%;
+  font-size: 13px; */
+  position: relative;
+  background-color: #cbdbfe;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 99%;
+}
+
+.headingWrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primaryColor);
+  /* box-shadow: 0px 5px 10px 0px rgba(237, 232, 237, 1); */
+}
+
+.chatHeadingAlignment {
+  display: flex;
+  padding: 10px;
+}
+
+.chatHeadingAlignment p {
+  padding: 13px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.chatHeadingAlignment a {
+  padding: 16px 10px 0 10px;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #89aeff;
+  cursor: pointer;
+}
+.chatHeadingAlignment a:hover {
+  background-color: #c7d9ff;
+}
+
+.chatIconAlignment img {
+  filter: drop-shadow(0px 1000px 0 #ffffff);
+  transform: translateY(-1000px);
+  width: 70%;
+}
+
+.iconAlignment {
+  display: flex;
+}
+
+.innerWrapper {
+  padding: 20px;
+  height: 57vh;
+  overflow-y: scroll;
+}
+
+.messagesContainer {
+  overflow-y: auto;
+}
+
+.chatAlignment {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.chatAlignment p {
+  padding-left: 5px;
+  font-size: 11px;
+  color: var(--primaryColor);
+}
+
+.chatIcon {
+  filter: drop-shadow(0px 1000px 0 var(--primaryColor));
+  transform: translateY(-1000px);
+  width: 15px;
+}
+
+.chatbotStyle {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 20px 20px 20px 0;
+    margin-bottom: 10px;
+}
+
+.userStyle {
+    display: flex;
+    justify-content: flex-end;
+    right: 0;
+    width: 100%;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    padding: 10px;
+    border-radius: 20px 20px 0px 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.userStyle{
+  right: 0;
+  width: 100%;
+}
+
+.searchBar {
+  display: flex;
+  flex: 1;
+  border: 1px solid #89aeff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.inputSearch {
+  width: 100%;
+  /* height: 40px; */
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.searchButton {
+  background-color: var(--primaryColor);
+  color: white;
+  width: 49px;
+  height: 53px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowIcon {
+  filter: drop-shadow(0px 1000px 0 rgb(255, 255, 255));
+  transform: translateY(-1000px);
+  position: absolute;
+  width: 20px;
+}
+
+.searchButton:hover {
+  background-color: #89aeff;
+}
+
+.messagesContainer {
+  overflow-y: auto;
+}
+
+.options {
+  background-color: white;
+  width: 70%;
+  cursor: pointer;
+  border: solid 1px #e7e7e7;
+  text-align: center;
+  padding: 10px;
+}
+
+.options:last-child {
+  border-bottom: none;
+}
+
+.options:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+      font-size: 10px;
+      height: 95%;
+  }
+
+  .innerWrapper {
+      font-size: 10px;
+  }
+}

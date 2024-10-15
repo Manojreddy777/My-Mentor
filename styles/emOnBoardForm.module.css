@@ -1,0 +1,122 @@
+.mainWrapper {
+    padding: 20px;
+}
+.centerWrapperOnboarding {
+    display: flex;
+}
+.leftWrapper {
+    padding-right: 20px;
+}
+.rightWrapper {
+    padding-left: 20px;
+    border-left: 3px solid #4473db;
+}
+.line {
+    border-bottom: 3px solid #4473db;
+}
+.title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.heading {
+    font-size: 22px;
+    padding: 20px;
+}
+.heading h4 {
+    font-weight: 600;
+}
+.inputAlignment {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.inputAlignment p {
+    /* align-self: center; */
+    white-space: nowrap;
+    padding: 10px;
+}
+.inputAlignment select {
+    display: flex;
+    width: 47%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inputAlignmentStall {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.inputAlignmentStall p {
+    align-self: center;
+    white-space: nowrap;
+    padding: 10px;
+}
+.inputAlignmentStall select {
+    display: flex;
+    width: 49%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.percentage {
+    display: flex;
+}
+.percentage span {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.inputCustom {
+    width: 280px;
+}
+.date {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+}
+.button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.closeButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+@media (max-width: 480px) {
+    .mainWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .inputAlignment {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .inputAlignment select {
+        display: flex;
+        width: 50%;
+        padding: 10px;
+    }
+    .button {
+        justify-content: center;
+    }
+}

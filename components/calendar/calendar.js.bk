@@ -1,0 +1,80 @@
+import React, { useEffect, useState } from "react";
+import "./calendar.module.css";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+
+
+const formatDate = (dateString, timeString) => {
+    const months = {
+        'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06',
+        'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12',
+    };
+
+    const parts = dateString.split('-');
+    if (parts.length === 3) {
+        const day = parts[0];
+        const month = months[parts[1].substr(0, 3)]; // Convert abbreviated month to numeric
+        const year = parts[2];
+
+        // Handle time formatting (HH:MM:SS)
+        const timeParts = timeString.split(':');
+        const hours = timeParts[0];
+        const minutes = timeParts[1];
+        const seconds = timeParts[2] || '00'; // If seconds are not provided, default to '00'
+
+        return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
+    }
+
+    return dateString; // Return as is if the format is unexpected
+};
+
+
+
+const Calendar = () => {
+    const [events, setEvents] = useState([]);
+
+    // When eventData changes, update the events state
+    useEffect(() => {
+        const eventData = async () => {
+            try {
+                const response = await fetch("https://api.finari.org/tsDashboard/getCalendarEvents?tnnt_id=2&month=9&year=2023");
+                const data = await response.json();
+                const transformed = data.map(event => ({
+                    title: event.event,
+                    start: formatDate(event.date, event.start_time),
+                    end: formatDate(event.date, event.end_time),
+                }));
+                setEvents(transformed);
+            } catch (error) {
+                console.error("Error fetching event data:", error);
+            }
+        }
+        eventData();
+    }, []);
+
+    return (
+        <div className="cal">
+            <FullCalendar
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView={"dayGridMonth"}
+                headerToolbar={{
+                    start: "today prev,next", // will normally be on the left. if RTL, will be on the right
+                    center: "title",
+                    end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
+                }}
+                themeSystem="Complex"
+                events={events}
+                eventDisplay={(view) => {
+                    // Display times only in "dayGridDay" and "timeGridWeek" views
+                    if (view === "dayGridDay" || view === "timeGridWeek") {
+                        return "block";
+                    }
+                    return "auto";
+                }}
+            />
+        </div>
+    )
+}
+export default Calendar

@@ -1,0 +1,105 @@
+.wrapper {
+	margin: 0 auto;
+	width: 80vw;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+.heading {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.aboutusTag {
+	font-size: 16px;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.selectCareer {
+	width: 300px;
+	padding: 7px;
+	display: inline-block;
+	border: 1px solid var(--primaryColor);
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 15px;
+	outline: none;
+	background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+}
+.button {
+	padding: 13px 50px;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+.sectionTitle {
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	color: var(--primaryColor);
+}
+.table {
+	width: 100%;
+}
+.table thead {
+	background-color: var(--primaryColor);
+	color: white;
+}
+.table > thead tr {
+	text-align: left;
+	padding: 10px;
+}
+
+.table > thead th {
+	padding: 10px;
+	/* margin-bottom: 20px; */
+}
+
+.table > tbody td {
+	/* background-color: var(--secondaryColor); */
+	/* text-align: left; */
+	padding: 10px;
+	/* margin-bottom: 20px; */
+	border-bottom: 1px solid rgb(226, 226, 226);
+}
+@media (max-width: 768px) {
+	.button {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+	.selectCareer {
+		margin-right: 10px;
+	}
+}
+@media (max-width: 480px) {
+	.wrapper {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	.button {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+	.selectCareer {
+		width: 100%;
+		background-color: white;
+	}
+	.table {
+		width: 100%;
+		table-layout: fixed;
+	}
+	.table thead {
+		font-size: 12px;
+	}
+	.table > thead tr {
+		text-align: center;
+	}
+	.table > tbody td {
+		padding: 15px;
+		margin-bottom: 20px;
+		word-wrap: break-word;
+		font-size: 12px;
+	}
+}

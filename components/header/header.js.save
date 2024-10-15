@@ -1,0 +1,734 @@
+import React from "react";
+
+import styles from "../header/header.module.css";
+import Menu from "../menu/menu";
+import LoginModal from "../login/login";
+
+const HEADER = [
+    {
+        id: 5,
+        title: "Home",
+        link: "/",
+    },
+    {
+        id: 1,
+        title: "Services",
+        open: false,
+        subMenu: [
+            {
+                id: 1,
+                title: "Core Banking",
+                link: "/core-banking",
+            },
+            {
+                id: 2,
+                title: "Web Technology",
+                link: "/web-technology",
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "Careers",
+        link: "/careers",
+    },
+    {
+        id: 3,
+        title: "About Us",
+        link: "/about-us",
+    },
+    {
+        id: 4,
+        title: "Contact Us",
+        link: "/contact-us",
+    },
+];
+
+const OPS = [
+    {
+        id: 1,
+        title: "Timesheet Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 3,
+                title: "My Details",
+                open: false,
+                subMenuProperties: [
+                    {
+                        id: 4,
+                        title: "My Tasks",
+                        link: "/hr/TsTask",
+                    },
+                    {
+                        id: 5,
+                        title: "My Timesheet",
+                        link: "/employee/timesheet",
+                    },
+                ],
+            },
+            {
+                id: 6,
+                title: "Team Details",
+                open: false,
+                subMenuProperties: [
+                    {
+                        id: 7,
+                        title: "WBS Details",
+                        link: "/comm/TsWbs",
+                    },
+                    {
+                        id: 8,
+                        title: "Project Details",
+                        link: "/comm/TsProject",
+                    },
+                    {
+                        id: 9,
+                        title: "Epic Details",
+                        link: "/comm/TsEpic",
+                    },
+                    {
+                        id: 10,
+                        title: "User Story Details",
+                        link: "/comm/TsUserStory",
+                    },
+                    {
+                        id: 11,
+                        title: "Task Details",
+                        link: "/comm/TsTaskOps",
+                    },
+                    {
+                        id: 12,
+                        title: "Task Handler",
+                        link: "/comm/TsTaskHandler",
+                    },
+                    {
+                        id: 13,
+                        title: "Team Timesheet",
+                        link: "/comm/timesheet",
+                    },
+                    {
+                        id: 19,
+                        title: "Time Mgmt Dashboard",
+                        link: "/timeMgmt/TsDashboard",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "SDLC Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 14,
+                title: "Project Details",
+                link: "/sdlcMgmt/sdlcProject",
+            },
+            {
+                id: 15,
+                title: "Module Details",
+                link: "/sdlcMgmt/sdlcModule",
+            },
+            {
+                id: 16,
+                title: "Feature Details",
+                link: "/sdlcMgmt/sdlcFeature",
+            },
+            {
+                id: 17,
+                title: "User Story Details",
+                link: "/sdlcMgmt/sdlcUS",
+            },
+            {
+                id: 18,
+                title: "Acceptance Criteria Details",
+                link: "/sdlcMgmt/sdlcAC",
+            },
+        ],
+    },
+];
+
+const HR = [
+    {
+        id: 1,
+        title: "Timesheet Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 3,
+                title: "My Details",
+                open: false,
+                subMenuProperties: [
+                    {
+                        id: 4,
+                        title: "My Tasks",
+                        link: "/hr/TsTask",
+                    },
+                    {
+                        id: 5,
+                        title: "My Timesheet",
+                        link: "/employee/timesheet",
+                    },
+                ],
+            },
+            {
+                id: 6,
+                title: "Team Details",
+                open: false,
+                subMenuProperties: [
+                    {
+                        id: 7,
+                        title: "WBS Details",
+                        link: "/comm/TsWbs",
+                    },
+                    {
+                        id: 8,
+                        title: "Project Details",
+                        link: "/comm/TsProject",
+                    },
+                    {
+                        id: 9,
+                        title: "Epic Details",
+                        link: "/comm/TsEpic",
+                    },
+                    {
+                        id: 10,
+                        title: "User Story Details",
+                        link: "/comm/TsUserStory",
+                    },
+                    {
+                        id: 11,
+                        title: "Task Details",
+                        link: "/comm/TsTask",
+                    },
+                    {
+                        id: 12,
+                        title: "Task Handler",
+                        link: "/comm/TsTaskHandler",
+                    },
+                    {
+                        id: 13,
+                        title: "Team Timesheet",
+                        link: "/comm/timesheet",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "SDLC Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 14,
+                title: "Project Details",
+                link: "/sdlcMgmt/sdlcProject",
+            },
+            {
+                id: 15,
+                title: "Module Details",
+                link: "/sdlcMgmt/sdlcModule",
+            },
+            {
+                id: 16,
+                title: "Feature Details",
+                link: "/sdlcMgmt/sdlcFeature",
+            },
+            {
+                id: 17,
+                title: "User Story Details",
+                link: "/sdlcMgmt/sdlcUS",
+            },
+            {
+                id: 18,
+                title: "Acceptance Criteria Details",
+                link: "/sdlcMgmt/sdlcAC",
+            },
+        ],
+    },
+];
+
+const PM = [
+    {
+        id: 1,
+        title: "Timesheet Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 7,
+                title: "WBS Details",
+                link: "/comm/TsWbs",
+            },
+            {
+                id: 8,
+                title: "Project Details",
+                link: "/comm/TsProject",
+            },
+            {
+                id: 9,
+                title: "Epic Details",
+                link: "/comm/TsEpic",
+            },
+            {
+                id: 10,
+                title: "User Story Details",
+                link: "/comm/TsUserStory",
+            },
+            {
+                id: 11,
+                title: "Task Details",
+                link: "/comm/TsTask",
+            },
+            {
+                id: 12,
+                title: "Task Handler",
+                link: "/comm/TsTaskHandler",
+            },
+            {
+                id: 13,
+                title: "Team Timesheet",
+                link: "/comm/timesheet",
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "SDLC Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 14,
+                title: "Project Details",
+                link: "/sdlcMgmt/sdlcProject",
+            },
+            {
+                id: 15,
+                title: "Module Details",
+                link: "/sdlcMgmt/sdlcModule",
+            },
+            {
+                id: 16,
+                title: "Feature Details",
+                link: "/sdlcMgmt/sdlcFeature",
+            },
+            {
+                id: 17,
+                title: "User Story Details",
+                link: "/sdlcMgmt/sdlcUS",
+            },
+            {
+                id: 18,
+                title: "Acceptance Criteria Details",
+                link: "/sdlcMgmt/sdlcAC",
+            },
+        ],
+    },
+];
+
+const EVNTMGMT_TL = [
+    {
+        id: 1,
+        title: "Project Details",
+        link: "/em/emProject",
+    },
+    {
+        id: 2,
+        title: "Stall Details",
+        link: "/em/emStall",
+    },
+    {
+        id: 3,
+        title: "GST Details",
+        link: "/em/emGST",
+    },
+    {
+        id: 4,
+        title: "Report-1 (Project Statistics)",
+        link: "/em/project-statistics",
+    },
+];
+
+const EVNTMGMT_JN_CS = [
+    {
+        id: 1,
+        title: "On-board Tenant",
+        link: "/em/emOnboard",
+    },
+];
+
+const EVNTMGMT_SN_CS = [
+    {
+        id: 1,
+        title: "Orders in my Queue",
+        link: "/em/emOrderQueue",
+    },
+];
+
+const USER = [
+    {
+        id: 1,
+        title: "HR Details",
+        open: false,
+        subMenu: [
+            {
+                id: 5,
+                title: "My Profile",
+                link: "/employee/MyProfile",
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "Timesheet Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 6,
+                title: "My Leave Details",
+                link: "/employee/MyLeaves",
+            },
+            {
+                id: 7,
+                title: "My Tasks",
+                link: "/employee/TsTask",
+            },
+            {
+                id: 8,
+                title: "My Timesheet",
+                link: "/employee/timesheet",
+            },
+        ],
+    },
+    {
+        id: 3,
+        title: "Academy",
+        open: false,
+        subMenu: [
+            {
+                id: 9,
+                title: "Course List",
+                link: "/employee/AcCourse",
+            },
+            {
+                id: 10,
+                title: "Take Exam",
+                link: "/employee/examPaper",
+            },
+            {
+                id: 11,
+                title: "My Scoure Card History List",
+                link: "/employee/ScoreCard",
+            },
+            {
+                id: 12,
+                title: "Video-Materials",
+                open: false,
+                subMenuProperties: [
+                    {
+                        id: 13,
+                        title: "Avaloq Foundation (Tamil)",
+                        link: "/employee/AcAvqFoundTamil",
+                    },
+                    {
+                        id: 14,
+                        title: "Avaloq Foundation (Telugu)",
+                        link: "/employee/AcAvqFoundTelugu",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 4,
+        title: "SDLC Mgmt",
+        open: false,
+        subMenu: [
+            {
+                id: 15,
+                title: "Project Details",
+                link: "/sdlcMgmt/sdlcProject",
+            },
+            {
+                id: 16,
+                title: "Module Details",
+                link: "/sdlcMgmt/sdlcModule",
+            },
+            {
+                id: 17,
+                title: "Feature Details",
+                link: "/sdlcMgmt/sdlcFeature",
+            },
+            {
+                id: 18,
+                title: "User Story Details",
+                link: "/sdlcMgmt/sdlcUS",
+            },
+            {
+                id: 19,
+                title: "Acceptance Criteria Details",
+                link: "/sdlcMgmt/sdlcAC",
+            },
+        ],
+    },
+];
+
+export default class Header extends React.Component {
+    constructor(props) {
+        super(props);
+
+        let menu = [];
+        if (global.config.user_role == null) {
+            menu = HEADER;
+        } else if (global.config.user_role == "6") {
+            menu = OPS;
+        } else if (global.config.user_role == "1") {
+            menu = USER;
+        } else if (global.config.user_role == "9") {
+            menu = GUEST;
+        } else if (global.config.user_role == "3") {
+            menu = PM;
+        } else if (global.config.user_role == "2") {
+            menu = HR;
+        } else if (global.config.user_role == "5") {
+            menu = FI;
+        } else if (global.config.user_role == "7") {
+            menu = AC;
+        } else if (global.config.user_role == "10") {
+            menu = EVNTMGMT_TL;
+        } else if (global.config.user_role == "11") {
+            menu = EVNTMGMT_JN_CS;
+        } else if (global.config.user_role == "12") {
+            menu = EVNTMGMT_SN_CS;
+        }
+
+
+
+        this.state = {
+            loginVisibility: false,
+            categoryListOpen: false,
+            username: undefined,
+            menu: menu,
+            subscribe: [],
+        };
+    }
+
+    componentDidMount() {
+        const username = global.localStorage.username;
+
+        if (username != null && username !== undefined) {
+            this.setState({
+                username: username,
+            });
+        }
+    }
+
+    async logout() {
+        localStorage.clear();
+        window.location = "/";
+    }
+
+    render() {
+        const { categoryListOpen, menu, loginVisibility, username } =
+            this.state;
+        return (
+            <div>
+                {loginVisibility && (
+                    <LoginModal
+                        visibility={loginVisibility}
+                        setVisibility={(v) =>
+                            this.setState({ loginVisibility: v })
+                        }
+                    />
+                )}
+                <div className={styles.mainWrapper}>
+                    <img
+                        className={styles.logoImg}
+                        src={"/assets/logo.png"}
+                        alt="Finari"
+                        onClick={() => (window.location = "/")}
+                    />
+
+                    <div className={styles.navbar}>
+                        {menu.map((m) =>
+                            m.subMenu?.length >= 0 ? (
+                                <div className={styles.dropdown}>
+                                    <div className={styles.dropbtn}>
+                                        {m.title}
+
+                                        {m.title != "Services" &&
+                                        <i
+                                            style={{ marginLeft: 5 }}
+                                            class="fa fa-caret-down"
+                                        ></i>}
+                                    </div>
+                                    <div className={styles.dropdownContent}>
+                                        <div className={styles.row}>
+                                            {m.subMenu.map((sm) =>
+                                                sm.subMenuProperties?.length >=
+                                                0 ? (
+                                                    <div
+                                                        className={
+                                                            styles.column
+                                                        }
+                                                    >
+                                                        <p href={sm.link}>
+                                                            {sm.title}
+                                                        </p>
+                                                        {sm.subMenuProperties
+                                                            ?.length > 0 &&
+                                                            sm.subMenuProperties.map(
+                                                                (p) => (
+                                                                    <a
+                                                                        href={
+                                                                            p.link
+                                                                        }
+                                                                    >
+                                                                        {
+                                                                            p.title
+                                                                        }
+                                                                    </a>
+                                                                )
+                                                            )}
+                                                    </div>
+                                                ) : (
+                                                    <div
+                                                        className={
+                                                            styles.columnSingle
+                                                        }
+                                                    >
+                                                        <a href={sm.link}>
+                                                            {sm.title}
+                                                        </a>
+                                                    </div>
+                                                )
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className={styles.headerStyle}>
+                                    <a href={m.link}>{m.title}</a>
+                                </div>
+                            )
+                        )}
+                    </div>
+
+                    {username == undefined ? (
+                        <div className={styles.signup}>
+                            <div>
+                                <a
+                                    onClick={() =>
+                                        this.setState({
+                                            loginVisibility: true,
+                                        })
+                                    }
+                                    className={styles.menuTitle}
+                                >
+                                    {console.log(username)}
+                                    {"Sign In"}
+                                </a>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className={styles.signup}>
+                            <div>
+                                <div className={`dropdown`}>
+                                    <a className={styles.menuTitle}>
+                                        {username}
+                                    </a>
+                                    <div
+                                        className={`dropdown-content`}
+                                        style={{ top: 20, left: -120 }}
+                                    >
+                                        <a
+                                            onClick={() => {
+                                                if (
+                                                    global.config.user_role ==
+                                                    "6"
+                                                ) {
+                                                    window.location =
+                                                        "/ops/asset-details";
+                                                } else if (
+                                                    global.config.user_role ==
+                                                    "1"
+                                                ) {
+                                                    window.location =
+                                                        "/employee/timesheet";
+                                                } else if (
+                                                    global.config.user_role ==
+                                                    "9"
+                                                ) {
+                                                    window.location =
+                                                        "/guest/examPaper";
+                                                } else if (
+                                                    global.config.user_role ==
+                                                    "3"
+                                                ) {
+                                                    window.location =
+                                                        "/comm/TsTask";
+                                                } else if (
+                                                    global.config.user_role ==
+                                                    "2"
+                                                ) {
+                                                    window.location =
+                                                        "/hr/TsTask";
+                                                } else if (
+                                                    global.config.user_role ==
+                                                    "5"
+                                                ) {
+                                                    window.location =
+                                                        "/employee/timesheet";
+                                                } else if (
+                                                    global.config.user_role ==
+                                                    "7"
+                                                ) {
+                                                    window.location =
+                                                        "/employee/timesheet";
+                                                } else if ( global.config.user_role == "10") {
+                                                    window.location = "/em/emProject";
+                                                } else if ( global.config.user_role == "11") {
+                                                    window.location = "/em/emOnboard";
+                                                } else if ( global.config.user_role == "12") {
+                                                    window.location = "/em/emOrderQueue";
+                                                }
+                                            }}
+                                        >
+                                            Settings
+                                        </a>
+                                        <a onClick={() => this.logout()}>
+                                            Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    <div
+                        className={styles.menuButton}
+                        onClick={() =>
+                            this.setState({
+                                categoryListOpen: !categoryListOpen,
+                            })
+                        }
+                    >
+                        <i
+                            class={`fa ${
+                                categoryListOpen ? "fa-close" : "fa-bars"
+                            }`}
+                            aria-hidden="true"
+                        ></i>
+                    </div>
+                </div>
+                <Menu
+                    menu={menu}
+                    open={categoryListOpen}
+                    setOpen={(v) => this.setState({ categoryListOpen: v })}
+                />
+            </div>
+        );
+    }
+}

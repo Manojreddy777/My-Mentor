@@ -1,0 +1,21 @@
+.wrapper {
+    margin-bottom: 40px;
+}
+
+.viewWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,22 @@
+.component3Container {
+    margin-bottom: 20px; /* Adjust the value based on your preference */
+  }
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between rows */
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px; /* Adjust the gap between columns */
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  /* Additional styles can be added based on your specific design requirements */
